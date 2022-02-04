@@ -5,25 +5,20 @@ public class Uri1051 {
 
     Scanner keyboard = new Scanner(System.in);
 
-    double salary;
-    salary = keyboard.nextDouble();
+    double salary = keyboard.nextDouble();
 
-    if (salary > 0 && salary <= 400.00) {
-        perc = 15;
-    } else if (salary > 400.00 && salary <= 800.00){
-        perc = 12;
-    } else if (salary > 800.00 && salary <= 1200.00) {
-        perc = 10;
-    } else if (salary > 1200.00 && salary <= 2000.00) {
-        perc = 7;
+    if (salary >= 0 && salary <= 2000) {
+        System.out.println("Isento");
+    } else if (salary > 2000 && salary <= 3000){
+        System.out.printf("R$ %.2f\n", (salary - 2000) * 0.08);
+    } else if (salary > 3000 && salary <= 4500) {
+        System.out.printf("R$ %.2f\n", (salary - 3000) * 0.18 + (1000 * 0.08));
     } else {
-        perc = 4;
+        System.out.printf("R$ %.2f\n", ((salary - 4500) * 0.28 + (1500 * 0.18) + (1000 * 0.08)));
     }
 
-    bonus = salary * perc;
-    newSalary = salary + bonus;
+
         
-    System.out.printf("Novo salario: %.2f\n Reajuste ganho: %.2f\n Em percentual: %d '%'\n", newSalary, bonus, perc);
 
     keyboard.close();
 

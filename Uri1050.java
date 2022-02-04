@@ -16,7 +16,7 @@ public class Uri1050 {
             System.out.println("Salvador");
             break;
         case 11:
-            System.out.println("São Paulo");
+            System.out.println("Sao Paulo");
             break;
         case 21:
             System.out.println("Rio de Janeiro");

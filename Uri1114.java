@@ -6,19 +6,13 @@ public class Uri1114 {
     Scanner keyboard = new Scanner(System.in);
 
     int password = keyboard.nextInt();
-    int correctPass = 2002;
 
-    do {
-        if (password != correctPass) {
-            System.out.println("Senha Invalida");
-
-        }
-    }
-    if (password != correctPass) {
+    while (password != 2002) {
         System.out.println("Senha Invalida");
-    } else {
-        System.out.println("Acesso Permitido");
+        password = keyboard.nextInt();
     }
+
+    System.out.println("Acesso Permitido");
 
     keyboard.close();
 
